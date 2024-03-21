@@ -135,7 +135,7 @@ let displayWeather = data => {
     elementFeelsLike.innerHTML = `Feels like ${convertKelvinToCelsius(feelsLike)}`;
     elementFeelsLike.style.marginBottom = '50px';
 //FORECAST------------------------------------------------------------------------------------------->
-fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${coordLat}&lon=${coordLon}&appid=${apiKey}`)
+fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${coordLat}&lon=${coordLon}&appid=${apiKey}`)
     .then(reply => reply.json())
     .then(json => {
         console.log(`Forecast for ${json.list[0].dt_txt}: ${convertKelvinToCelsius(json.list[0].main.temp)}`)
@@ -287,7 +287,7 @@ const displayImage = async (cityName) => {
 
 }
 //displayImage();
-// containerForContainers.style.border = '1px solid grey';
+// containerForContainers.style.border = '1px solid red';
 containerForContainers.style.width = '100%';
 containerForContainers.style.display = 'flex';
 containerForContainers.style.flexWrap = 'wrap';
