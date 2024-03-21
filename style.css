@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@media screen and (min-width: 0px) {
+    .newContainer {display: none}
+}
+@media screen and (min-width: 850px) {
+    .newContainer {
+        display: flex;
+        width: 290px;
+        border: 1px solid grey;
+        border-radius: 10px;
+        margin: 2% 10% 2% 0%;
+    }
+}
